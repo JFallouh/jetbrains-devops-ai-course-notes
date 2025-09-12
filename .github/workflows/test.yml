@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     stepss:
-      - name: Print Success message
+      - name: Print Success Message
         run: echo 'The triggering wrokflow passed'
 
     on-failure:
       runs-on: ubuntu-latest
       if: ${{ github.event.wrokflow_run.conclustion == 'failure' }}
       steps:
-        - name: Print Failure message
-          run: echo 'Thre triggering workflow failed'
+        - name: Print Failure Message
+          run: echo 'The triggering workflow failed'
