@@ -1,0 +1,21 @@
+name: Test
+
+on:
+  workflow_run:
+    workflows: [Build]
+    types: [completed]
+
+jobs:
+  on-success:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    stepss:
+      - name: Print Success message
+        run: echo 'The triggering wrokflow passed'
+
+    on-failure:
+      runs-on: ubuntu-latest
+      if: ${{ github.event.wrokflow_run.conclustion == 'failure' }}
+      steps:
+        - name: Print Failure message
+          run: echo 'Thre triggering workflow failed'
