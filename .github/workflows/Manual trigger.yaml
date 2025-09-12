@@ -6,10 +6,10 @@ on:
       name:
         description: "Whom to greet"
         default: "World"
-        
+
 jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
       - name: Hello Step
-        run: echo "Hello ${{github.event.inputs.name}}"
+        run: echo "Hello ${{ github.event.inputs.name }}"
