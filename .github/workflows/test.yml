@@ -11,11 +11,11 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Print Success Message
-        run: echo 'The triggering wrokflow passed'
+        run: echo 'The triggering workflow passed'
 
-    on-failure:
-      runs-on: ubuntu-latest
-      if: ${{ github.event.wrokflow_run.conclustion == 'failure' }}
-      steps:
-        - name: Print Failure Message
-          run: echo 'The triggering workflow failed'
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - name: Print Failure Message
+        run: echo 'The triggering workflow failed'
