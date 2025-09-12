@@ -6,6 +6,6 @@ on:
 
 jobs:
   ping:
-    uses: USER_OR_ORG_NAME/REPO_NAME/.gitgub/workflows/pong.yaml@master
+    uses: JFallouh/jetbrains-devops-ai-course-notes/.github/workflows/pong.yml@main
     with:
       ping: 'PONG'
